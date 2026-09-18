@@ -21,4 +21,7 @@
 - Tree shaking (remove unused code )
 - Different dev and prod bundles
 
- 
+ // React.createElement => Object => HTML Element(rendering) => UI
+
+// JSX Element (TRANSPILED BEFORE IT REACHES THE JS ) - PARCEL - BABEL 
+// JSX (transpiled by Babel) ⇒ React.createElement ⇒ ReactElement⇒ JS Object ⇒ HTML Element(render)
