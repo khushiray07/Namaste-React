@@ -1,26 +1,20 @@
-const heading = React.createElement(
-  "h1",
-  {
-    id: "title",
-  },
-  "Heading 1"
-);
-const heading2 = React.createElement(
-  "h2",
-  {
-    id: "title",
-  },
-  "Heading 2"
-);
-const container = React.createElement(
-  "div",
-  {
-    id: "container",
-  },
-  [heading, heading2]
-);
-console.log(heading);
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+const parent = React.createElement("div", { id: "parent" }, [
+  React.createElement("div", { id: "child" }, [
+    React.createElement("h1", {}, "this is namanste React"),
+    React.createElement("h2", {}, "I am h2 tag"),
+  ]),
+  React.createElement("div", { id: "child2" }, [
+    React.createElement("h1", {}, "I am h1 tag"),
+    React.createElement("h2", {}, "I am h2 tag"),
+  ]),
+]);
+  
+  
+console.log(parent);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 //passing a react element inside the root
 //async defer
-root.render(container);
+root.render(parent);
